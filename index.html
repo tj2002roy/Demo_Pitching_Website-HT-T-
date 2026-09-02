@@ -314,7 +314,7 @@
                   </select>
                 </div>
 
-                <div class="fare-input-group" style="grid-column: span 2;">
+                <div class="fare-input-group full-width">
                   <label>Travel Date (Optional)</label>
                   <input type="date" id="calc-date-input" />
                 </div>
@@ -326,7 +326,7 @@
               <span class="fare-result-label">Estimated Fare (All Inclusive)</span>
               <div id="calc-fare-amount" class="fare-result-amount">₹4,200</div>
               <p id="calc-fare-note" class="fare-result-note">Approx. distance: 125 km (4.5 hrs). Includes fuel, toll & driver allowance.</p>
-              <button class="btn btn-whatsapp" style="width: 100%;" onclick="bookEstimatedCabWhatsApp()">
+              <button class="btn btn-whatsapp fare-book-btn" style="width: 100%;" onclick="bookEstimatedCabWhatsApp()">
                 <span>Book This Cab via WhatsApp</span>
               </button>
             </div>
@@ -344,10 +344,10 @@
           </div>
           <div class="spotlight-content-side">
             <div class="section-badge gold">Specialty Route</div>
-            <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: #0f172a;">
+            <h2 class="spotlight-title">
               Experience the Legendary <span style="color: #0d9488;">Old Silk Route</span>
             </h2>
-            <p style="color: #475569; font-size: 1rem; line-height: 1.7;">
+            <p class="spotlight-desc" style="color: #475569; font-size: 1rem; line-height: 1.7;">
               Trace the historic trade route that once connected Lhasa (Tibet) to India. Drive across 32 thrilling hairpin curves at Zuluk, witness glowing sunrise at Thambi View Point, visit Gnathang Valley, and stay in warm local homestays.
             </p>
             <ul class="spotlight-features">
@@ -368,7 +368,7 @@
                 <span>4x4 Bolero / Scorpio Mountain Cabs</span>
               </li>
             </ul>
-            <div style="display: flex; gap: 1rem;">
+            <div class="spotlight-cta-row">
               <button class="btn btn-primary" onclick="filterPackagesByDestination('silk-route')">View Silk Route Itineraries</button>
               <a href="https://wa.me/917908287972?text=Hi%20Hrishi%20Tours,%20please%20share%20Silk%20Route%20package%20details." target="_blank" class="btn btn-whatsapp">WhatsApp Enquiry</a>
             </div>

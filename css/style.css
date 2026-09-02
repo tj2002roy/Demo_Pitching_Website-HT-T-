@@ -1252,6 +1252,19 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
+.spotlight-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.spotlight-cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .spotlight-features {
   list-style: none;
   display: grid;
@@ -2048,13 +2061,100 @@ h1, h2, h3, h4, h5, h6 {
   .hero-float-card {
     display: none;
   }
-  .fare-calc-grid,
+  
+  /* Mountain Cab Fare Calculator Mobile Optimization */
+  .fare-calculator-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+  .fare-calc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .fare-calc-title {
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+  .fare-calc-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
+  }
+  .fare-inputs-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .fare-input-group.full-width,
+  .fare-input-group[style*="grid-column"] {
+    grid-column: span 1 !important;
+  }
+  .fare-input-group select,
+  .fare-input-group input {
+    max-width: 100%;
+    font-size: 0.88rem;
+    box-sizing: border-box;
+  }
+  .fare-result-box {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-md);
+  }
+  .fare-result-amount {
+    font-size: 2.3rem;
+  }
+  .fare-result-note {
+    font-size: 0.78rem;
+    margin-bottom: 1.25rem;
+  }
+  .fare-book-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+
+  /* Specialty Route (Silk Route Spotlight) Mobile Optimization */
+  .spotlight-section {
+    padding: 3.5rem 0;
+  }
+  .spotlight-box {
+    grid-template-columns: 1fr;
+    border-radius: var(--radius-lg);
+  }
+  .spotlight-img-side {
+    min-height: 220px;
+    height: 220px;
+  }
+  .spotlight-content-side {
+    padding: 1.75rem 1.25rem;
+  }
+  .spotlight-title {
+    font-size: 1.65rem;
+    line-height: 1.3;
+  }
+  .spotlight-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .spotlight-features {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+  }
+  .spotlight-feat-item {
+    font-size: 0.88rem;
+  }
+  .spotlight-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .spotlight-cta-row .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+  }
+
   .contact-layout-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  .spotlight-content-side {
-    padding: 2rem;
   }
 }
 
@@ -2101,12 +2201,44 @@ h1, h2, h3, h4, h5, h6 {
   .hero-main-card img {
     height: 320px;
   }
-  .fare-inputs-grid {
-    grid-template-columns: 1fr;
-  }
+  
+  /* Ultra-compact Phone view (< 480px) for Cab Fare & Route Slate */
   .fare-calculator-card {
-    padding: 1.5rem;
+    padding: 1.25rem 0.9rem;
+    border-radius: var(--radius-md);
+    margin: 0 -0.25rem;
   }
+  .fare-calc-title {
+    font-size: 1.3rem;
+  }
+  .fare-result-box {
+    padding: 1.25rem 0.85rem;
+  }
+  .fare-result-amount {
+    font-size: 2rem;
+  }
+  .fare-input-group select,
+  .fare-input-group input {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.84rem;
+  }
+  .spotlight-box {
+    margin: 0 -0.25rem;
+  }
+  .spotlight-img-side {
+    min-height: 190px;
+    height: 190px;
+  }
+  .spotlight-content-side {
+    padding: 1.35rem 0.9rem;
+  }
+  .spotlight-title {
+    font-size: 1.45rem;
+  }
+  .spotlight-feat-item {
+    font-size: 0.85rem;
+  }
+
   .contact-info-card {
     padding: 1.75rem;
   }
