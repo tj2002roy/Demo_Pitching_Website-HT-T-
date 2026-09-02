@@ -443,4 +443,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Mobile Navigation Menu Toggle & Auto-Close
+  const mobileToggle = document.getElementById('mobile-nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileToggle.innerHTML = navLinks.classList.contains('active') ? '<span>✕</span>' : '<span>☰</span>';
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        if (mobileToggle) mobileToggle.innerHTML = '<span>☰</span>';
+      });
+    });
+  }
 });

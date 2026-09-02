@@ -1982,14 +1982,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
   .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 1.75rem 2rem;
+    gap: 1.25rem;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+    border-bottom: 2px solid var(--primary-500);
     display: none;
+    z-index: 999;
+  }
+  .nav-links.active {
+    display: flex;
+    animation: mobileSlideDown 0.25s ease forwards;
   }
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    background: var(--dark-100);
+    color: var(--dark-900);
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: 1px solid var(--dark-200);
+    transition: background var(--transition-fast);
+  }
+  .mobile-toggle:hover {
+    background: var(--primary-50);
+    color: var(--primary-700);
   }
   .hero-title {
-    font-size: 2.3rem;
+    font-size: 2.25rem;
   }
   .search-widget {
     grid-template-columns: 1fr;
@@ -2012,5 +2047,70 @@ h1, h2, h3, h4, h5, h6 {
   }
   .hero-float-card {
     display: none;
+  }
+  .fare-calc-grid,
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .spotlight-content-side {
+    padding: 2rem;
+  }
+}
+
+@keyframes mobileSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.95rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .header-wa-btn span {
+    display: none;
+  }
+  .header-wa-btn {
+    padding: 0.55rem 0.75rem;
+  }
+  .header-wa-btn::after {
+    content: "WhatsApp";
+    font-size: 0.82rem;
+  }
+  .floating-contact-btn {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.85rem;
+  }
+  .modal-card {
+    padding: 1.25rem;
+  }
+  .hero-main-card img {
+    height: 320px;
+  }
+  .fare-inputs-grid {
+    grid-template-columns: 1fr;
+  }
+  .fare-calculator-card {
+    padding: 1.5rem;
+  }
+  .contact-info-card {
+    padding: 1.75rem;
+  }
+  .inquiry-form-card {
+    padding: 1.5rem;
   }
 }
